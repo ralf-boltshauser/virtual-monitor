@@ -34,12 +34,12 @@ windows=$(wmctrl -l -G)
         # echo
 
         preferred_width=1280
-        preferred_height=1350
+        preferred_height=1344
 
         # Only user Windows
-        if [ "$desktop" -ne -1 ]; then
+        if [ "$desktop" -ne -1 ] && [ "$y" -gt 102 ]; then
             window_x_center=$((x + width/2))
-
+            echo $y
             # check if command argument is 1
             if [ "$1" = "1" ]; then
                 # split through 4 screens
